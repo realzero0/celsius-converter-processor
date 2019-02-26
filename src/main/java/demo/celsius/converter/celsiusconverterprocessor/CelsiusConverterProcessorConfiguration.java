@@ -8,8 +8,8 @@ import org.springframework.integration.annotation.Transformer;
 public class CelsiusConverterProcessorConfiguration {
 
     @Transformer(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
-    public int convertToCelsius(String payload) {
-        int fahrenheitTemperature = Integer.parseInt(payload);
-        return (fahrenheitTemperature-32)*5/9;
+    public String convertToCelsius(String data) {
+        System.out.println(data);
+        return data;
     }
 }
