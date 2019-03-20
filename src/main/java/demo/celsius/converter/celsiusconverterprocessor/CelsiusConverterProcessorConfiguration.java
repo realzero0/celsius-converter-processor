@@ -12,7 +12,7 @@ public class CelsiusConverterProcessorConfiguration {
     @StreamListener(Processor.INPUT)
     @SendTo(Processor.OUTPUT)
     public String convertToCelsius(@Payload String data) throws InterruptedException {
-        for(int i = 1; i < 100; i++) {
+        for(int i = 1; i < 30; i++) {
             System.out.println(i + " data: " + data);
             Thread.sleep(1000);
         }
